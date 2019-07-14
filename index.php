@@ -57,7 +57,7 @@
                 }
             ]
             //contract address. please change the address to your own
-            var contractaddress = '0xdcc0c15400e3f30c8e32bea6bcb57fbc9b275210';
+            var contractaddress = '0xf882a58e5ef50c445bc35fe9a8c00fd9b56c578b';
             //instantiate and connect to contract address via Abi
             var myAbi = web3.eth.contract(abi);
             var myfunction = myAbi.at(contractaddress);

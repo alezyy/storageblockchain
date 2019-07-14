@@ -31,7 +31,7 @@ contract Diploma {
     }
 
     function getStudent(address _address) view public returns (uint, string, string, string, string, string) {
-        return (students[_address].age, students[_address].fName, students[_address].lName, students[_address].schoolName, students[_address].country, students[_address].description);
+        return (students[_address].sId, students[_address].fName, students[_address].lName, students[_address].schoolName, students[_address].country, students[_address].description);
     }
 
     function countStudents() view public returns (uint) {

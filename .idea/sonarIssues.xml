@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../ets-blockchain/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../quickpresse-to-laravel/plugins-october/logimonde/quickpresse/updates/create_accounts_table.php">
           <value>
             <set />
@@ -39,6 +44,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../sys869/.env">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../sys869/resources/views/components/user-profile.blade.php">
           <value>
             <set />
           </value>

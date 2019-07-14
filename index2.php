@@ -156,13 +156,13 @@
             ]
 
             //contract address. please change the address to your own
-            var contractaddress = '0xa477ed2d404ed97d2a499533a099ff507c9ec672';
+            var contractaddress = '0x8ca5d830a6e99f57b45e34f4af4fc019b8b0e1fb';
             //instantiate and connect to contract address via Abi
             var myAbi = web3.eth.contract(abi);
             var myfunction = myAbi.at(contractaddress);
             //call the get function of our SimpleStorage contract
 
-            var address = '0xca35b7d915458ef540ade6068dfe2f44e8fa733c';
+            var address = '0x49b7b388019e742cd0d9ac47492e63d8f554b0e8a060fc774bbf98168987e21a';
 
             myfunction.getStudent.call(address, (err, res) => {
 
@@ -319,19 +319,29 @@
         ]
 
         //contract address. please change the address to your own
-        var contractaddress = '0xa477ed2d404ed97d2a499533a099ff507c9ec672';
+        var contractaddress = '0x985efccac402290a57334e36d5596e18f864937d';
         //instantiate and connect to contract address via Abi
 
         var myAbi = web3.eth.contract(abi);
         var myfunction = myAbi.at(contractaddress);
         //call the set function of our SimpleStorage contract
-        myfunction.set.sendTransaction(document.getElementById("xvalue").value, { from: web3.eth.accounts[0], gas: 4000000 }, function (error, result) {
+
+
+        myfunction.setStudent(document.getElementById("xvalue").value, 999, 1235, Paul, 234, Beta, 766, (err, res) =>{
+            console.log("this is my result", res);
+            if(err){
+                console.log(err)
+            }
+        });
+
+
+        /* myfunction.set.sendTransaction(document.getElementById("xvalue").value, { from: web3.eth.accounts[0], gas: 4000000 }, function (error, result) {
             if (!error) {
                 console.log(result);
             } else {
                 console.log(error);
             }
-        })
+        }) */
 
 
         /* } catch (err) {
@@ -383,6 +393,13 @@
             </td>
         </tr>
         <br>
+
+    </table>
+
+    <hr>
+
+    <table>
+
         <tr>
             <td>Insert a new value :</td>
             <td>
@@ -390,7 +407,10 @@
                 <input id="Button1" type="button" onclick="setvalue()" value="Add to Blockchain" />
             </td>
         </tr>
+
     </table>
+
+
 </center>
 </body>
 </html>
